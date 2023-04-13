@@ -11,7 +11,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'dockerpasswd', variable: 'dhpasswd')]) {
                     sh 'docker login -u khanshoyeb7 -p ${dhpasswd}'
-                    sh 'docker push khanshoyeb7/blank'
+                    sh 'docker push khanshoyeb7/changed'
                 }
             }
         }
