@@ -7,7 +7,7 @@ pipeline {
                 sh 'docker build -t khanshoyeb7/blank .'
             }
         }
-        stage('docker build') {
+        stage('docker push') {
             steps {
                 withCredentials([string(credentialsId: 'dockerpasswd', variable: 'dhpasswd')]) {
                     sh 'docker login -u khanshoyeb7 -p ${dhpasswd}'
