@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('docker build') {
             steps {
-                sh 'docker build -t khanshoyeb7/blank .'
+                sh 'docker build -t khanshoyeb7/changed .'
             }
         }
         stage('docker push') {
